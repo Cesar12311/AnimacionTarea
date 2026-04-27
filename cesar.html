@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Cesar</title>
+    <style>
+        .escena {
+            width: 1890px;
+            height: 930px;
+            background-image: url("https://www.accesor.com/wp-content/uploads/Estadios-de-Futbol.jpg");
+            background-size: cover;
+            position: relative;
+            perspective: 1000px;
+           
+        }
+        .carta {
+            width: 200px;
+            height: 400px;
+            border-radius: 25px;
+            transition: all 2s ease;
+            background-position: center;
+            position: relative;
+            top: 30%;
+            left: 45%;
+            transform-style: preserve-3d;
+            
+        }
+        .c1 {
+            width: 100%;
+            height: 100%;
+            background-image: url("https://static.messi.com/wp-content/uploads/2025/08/GzZ9Zy3XAAEbq3U-scaled.jpg");
+            background-size: cover;
+            border-radius: 25px;
+            background-position: center;
+            position: absolute;
+            border: 4px solid black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            backface-visibility: hidden;
+            box-shadow: 10px 10px 30px rgb(33, 84, 0);
+        }
+        .c2 {
+            width: 100%;
+            height: 100%;
+            border: 4px solid black;
+            border-radius: 25px;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/23/Cristiano_Ronaldo_WC2022_-_01.jpg?utm_source=es.wikivoyage.org&utm_campaign=index&utm_content=original");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            backface-visibility: hidden;
+            
+            box-shadow: 10px 10px 77px rgb(199, 13, 0);
+            
+        }
+        .meta {
+            width: 400px;
+            height: 400px;
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/044/016/864/small/soccer-goal-net-on-transparent-background-png.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            bottom: -25px;
+            right: -50px;
+        }
+        .balon {
+            width: 100px;
+            height: 100px;
+            background-image: url("https://repogenerico.blob.core.windows.net/products-1024x1024/image-removebg-preview_-_2025-10-22T110738_be38c21.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+        }
+        .msj {
+            font-size: 50px;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        .escena:hover .msj {
+            animation-name: movmsj;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+        }
+        .carta:hover .c1 {
+            
+            animation-name: vuelta1;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        .carta:hover .c2 {
+            animation-name: vuelta2;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        .carta:hover .escena {
+            animation-name: decora;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        .escena:hover .meta {
+            animation-name: movmeta;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        .escena:hover .balon {
+            animation-name: movbalon;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes vuelta1 {
+            0% {
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: rotateY(180deg);
+                opacity: 0;
+                
+            }
+        }
+        @keyframes vuelta2 {
+            0% {
+                transform: rotateY(180deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateY(360deg);
+                opacity: 1;
+                
+            }
+        }
+        @keyframes movbalon {
+            0% {
+                bottom: 0%;
+                left: 0%;
+            }
+
+            50% {
+                bottom: 0%;
+                left: 50%;
+                transform: translateY(-150px);
+                
+            }
+            100% {
+                bottom: 0%;
+                left: 100%;
+                
+            }
+        }
+        @keyframes movmsj {
+            0% {
+                
+                opacity: 1;
+            }
+            100% {
+                
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="escena">
+        <div class="msj">El Mejor Jugador del Mundo</div>
+        <div class="meta"></div>
+        <div class="balon"></div>
+        <div class="carta">
+            <div class="c1"></div>
+            <div class="c2"></div>
+                
+        </div>
+    </div>
+</body>
+</html>
