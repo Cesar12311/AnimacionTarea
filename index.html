@@ -12,7 +12,6 @@
             background-size: cover;
             position: relative;
             perspective: 1000px;
-           
         }
         .carta {
             width: 200px;
@@ -24,7 +23,6 @@
             top: 30%;
             left: 45%;
             transform-style: preserve-3d;
-            
         }
         .c1 {
             width: 100%;
@@ -54,9 +52,7 @@
             left: 0;
             opacity: 0;
             backface-visibility: hidden;
-            
             box-shadow: 10px 10px 77px rgb(199, 13, 0);
-            
         }
         .meta {
             width: 400px;
@@ -87,7 +83,6 @@
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
-            
         }
         .escena:hover .msj {
             animation-name: movmsj;
@@ -96,7 +91,6 @@
             animation-duration: 1s;
         }
         .carta:hover .c1 {
-            
             animation-name: vuelta1;
             animation-duration: 2s;
             animation-timing-function: ease-out;
@@ -135,7 +129,6 @@
             100% {
                 transform: rotateY(180deg);
                 opacity: 0;
-                
             }
         }
         @keyframes vuelta2 {
@@ -146,7 +139,6 @@
             100% {
                 transform: rotateY(360deg);
                 opacity: 1;
-                
             }
         }
         @keyframes movbalon {
@@ -178,7 +170,6 @@
             }
         }
     </style>
-
 </head>
 <body>
     <div class="escena">
@@ -187,10 +178,8 @@
         <div class="balon"></div>
         <div class="carta">
             <div class="c1"></div>
-            <div class="c2"></div>
-                
+            <div class="c2"></div>     
         </div>
     </div>
-    
 </body>
 </html>
